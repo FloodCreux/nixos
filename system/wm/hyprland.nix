@@ -76,7 +76,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       # Prerequisite for screensharing
-      wireplumber.enable = true;
+      # wireplumber.enable = true;
     };
 
     # Allows Hyprland to run without root privileges
