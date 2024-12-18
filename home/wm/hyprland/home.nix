@@ -41,7 +41,7 @@ let
     ++ fontPkgs
     ++ audioPkgs;
 
-  # wpctl = "${pkgs.wireplumber}/bin/wpctl";
+  wpctl = "${pkgs.wireplumber}/bin/wpctl";
 
   scripts = pkgs.callPackage ./scripts.nix { };
 
@@ -113,11 +113,6 @@ in
     xdgOpenUsePortal = true;
   };
 
-  # add back to audio binding
-  # binddel=,XF86AudioRaiseVolume,Raise volume 󰝝 ,exec,${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%+
-  #   binddel=,XF86AudioLowerVolume,Lower volume 󰝞 ,exec,${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%-
-  #   binddl=,XF86AudioMute,Toggle mute 󰝟 ,exec,${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle
-
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig =
@@ -127,6 +122,9 @@ in
         bindd=SUPER,P,App launcher,exec,${lib.exe pkgs.wofi} --show run --style=${./wofi.css} --term=footclient --prompt=Run
         bindd=SUPERSHIFT,A,Take screenshot,exec,${lib.exe scripts.satty}
         bindd=SUPERCTRL,L,Lock system,exec,${lib.exe pkgs.hyprlock}
+        binddel=,XF86AudioRaiseVolume,Raise volume 󰝝 ,exec,${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%+
+        binddel=,XF86AudioLowerVolume,Lower volume 󰝞 ,exec,${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        binddl=,XF86AudioMute,Toggle mute 󰝟 ,exec,${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle
         # audio volume bindings
 
         ${workspaceConf { monitor = "${scripts.extMonitor}"; }}
