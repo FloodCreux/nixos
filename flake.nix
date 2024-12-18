@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    flake-schema.url = "github:DeterminateSystems/flake-schemas";
+    flake-schemas.url = "github:DeterminateSystems/flake-schemas";
 
     nix-schema = {
       url = "github:DeterminateSystems/nix-src/flake-schemas";
