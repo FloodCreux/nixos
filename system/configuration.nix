@@ -49,6 +49,8 @@ in
     vim
     wget
     git
+    kitty
+    yazi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
