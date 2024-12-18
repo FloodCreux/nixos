@@ -10,7 +10,7 @@ with inputs;
 
 let
   sharedImports = [
-    neovim-flake.homeManagerModules.${system}.default
+    neovim-flake.homeManagerModules.${system}.nvim
     ({ home.packages = extraPkgs; })
     ({ nix.registry.nixpkgs.flake = inputs.nixpkgs; })
   ];
