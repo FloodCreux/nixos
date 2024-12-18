@@ -22,7 +22,14 @@ let
     lib =
       (p.lib.extend (
         _: _: {
-          inherit (libx) exe removeNewLine;
+          inherit (libx)
+            exe
+            removeNewLine
+            mkVimBool
+            withAttrSet
+            withPlugins
+            writeIf
+            ;
         }
       )).extend
         libVersionOverlay;
