@@ -23,10 +23,10 @@ size = "60% 60%"
 margin = 0
 skip_windowrules = ["aspect", "workspace"]
 
-[scratchpads.musicplayer]
-animation = ""
-command = "music"
-class = "Music"
-lazy = true
-size = "70% 70%"
-margin = 0
+# [scratchpads.musicplayer]
+# animation = ""
+# command = "music"
+# class = "Music"
+# lazy = true
+# size = "70% 70%"
+# margin = 0
