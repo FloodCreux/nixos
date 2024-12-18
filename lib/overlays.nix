@@ -3,6 +3,14 @@
 with inputs;
 
 let
+  cowsayOverlay = f: p: {
+    inherit (cowsay.packages.${system}) cowsay;
+  };
+
+  fishOverlay = f: p: {
+    inherit fish-bobthefish-theme fish-keytool-completions;
+  };
+
   nixSearchOverlay = f: p: {
     nix-search = nix-search.packages.${system}.default;
   };
@@ -91,9 +99,11 @@ let
   };
 in
 [
+  cowsayOverlay
+  fishOverlay
   libOverlay
   nixSearchOverlay
-  nurpkgs.overlays.default
+  # nurpkgs.overlays.default
   neovim-flake.overlays.${system}.default
   statix.overlays.default
   xargsOverlay
