@@ -142,10 +142,10 @@ in
     };
 
     # Sudo custom prompt message
-    sudo.configFile = ''
-      Defaults lecture=always
-      Defaults lecture_file=${misc/groot.txt}
-    '';
+    # sudo.configFile = ''
+    #   Defaults lecture=always
+    #   Defaults lecture_file=${misc/groot.txt}
+    # '';
   };
 
   # Nix daemon config
