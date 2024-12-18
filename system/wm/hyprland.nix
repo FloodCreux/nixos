@@ -27,14 +27,14 @@
   };
 
   # nice but buggy: https://github.com/rharish101/ReGreet/issues/45
-  # programs.regreet = {
-  #   enable = false;
-  #   settings = (lib.importTOML ./regreet.toml) // {
-  #     background = {
-  #       path = ../imgs/hyprland.png;
-  #     };
-  #   };
-  # };
+  programs.regreet = {
+    enable = false;
+    settings = (lib.importTOML ./regreet.toml) // {
+      # background = {
+      #   path = ../imgs/hyprland.png;
+      # };
+    };
+  };
 
   services = {
     # Bluetooth manager

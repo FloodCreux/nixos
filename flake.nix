@@ -27,18 +27,52 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Nix Search
+    # Fish shell
+    fish-bobthefish-theme = {
+      url = "github:gvolpe/theme-bobthefish";
+      flake = false;
+    };
+
+    fish-keytool-completions = {
+      url = "github:ckipp01/keytool-fish-completions";
+      flake = false;
+    };
+
+    # Github Markdown ToC generator
+    gh-md-toc = {
+      url = "github:ekalinin/github-markdown-toc";
+      flake = false;
+    };
+
+    # Fast nix search client
     nix-search = {
       url = "github:diamondburned/nix-search";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rycee-nurpkgs = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    # Nix linter
+    fenix = {
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nurpkgs.url = "github:nix-community/NUR";
+    statix = {
+      url = "github:nerdypepper/statix";
+      inputs.fenix.follows = "fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Miscelaneous
+    cowsay = {
+      url = "github:snowfallorg/cowsay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Firefox style
+    penguin-fox = {
+      url = "github:p3nguin-kun/penguinFox";
+      flake = false;
+    };
   };
 
   outputs =

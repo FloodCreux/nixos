@@ -93,10 +93,10 @@ in
 [
   libOverlay
   nixSearchOverlay
-  # nurpkgs.overlays.default
+  nurpkgs.overlays.default
   neovim-flake.overlays.${system}.default
-  # statix.overlays.default
-  # xargsOverlay
+  statix.overlays.default
+  xargsOverlay
   (import ../home/overlays/hypr-monitor-attached)
   buildersOverlay
   treesitterGrammarsOverlay
