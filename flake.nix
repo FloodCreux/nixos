@@ -23,7 +23,7 @@
 
     # Hyprland
     hypr-binds-flake = {
-      url = "github:hyprland-community/hpr-binds";
+      url = "github:hyprland-community/hypr-binds";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
