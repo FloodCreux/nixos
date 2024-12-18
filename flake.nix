@@ -18,7 +18,7 @@
     neovim-flake = {
       url = "github:FloodCreux/neovim-ide";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-schemas.follows = "flake-schemas";
+      # inputs.flake-schemas.follows = "flake-schemas";
     };
 
     # Hyprland
