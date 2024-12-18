@@ -92,6 +92,8 @@ case $1 in
     rebuild_mac_2015;;
   "vm")
     rebuild_mac_2015_vm;;
+  "pre")
+    pre_home;;
   *)
     echo "Wrong argument: look at the switch script.";;
 esac
