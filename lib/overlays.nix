@@ -81,7 +81,7 @@ let
         inherit hidpi;
         inherit (inputs) gh-md-toc penguin-fox;
         inherit (inputs.rycee-nurpkgs.lib.${system}) buildFirefoxXpiAddon;
-        addons = f.nur.repos.rycee.firefox-addons;
+        addons = { }; # f.nur.repos.rycee.firefox-addons;
       };
   };
 
