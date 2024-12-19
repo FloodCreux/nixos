@@ -51,6 +51,7 @@ in
     git
     kitty
     yazi
+    gh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

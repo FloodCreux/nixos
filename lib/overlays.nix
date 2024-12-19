@@ -104,6 +104,12 @@ let
         '';
     });
   };
+
+  rustOverlay = inputs.fenix.overlays.default;
+
+  zigOverlay = f: p: {
+    zigpkgs = zig.packages.${p.system};
+  };
 in
 [
   cowsayOverlay
@@ -111,6 +117,8 @@ in
   libOverlay
   nixSearchOverlay
   nurpkgs.overlays.default
+  rustOverlay
+  zigOverlay
   neovim-flake.overlays.${system}.default
   statix.overlays.default
   xargsOverlay

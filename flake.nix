@@ -80,6 +80,9 @@
       url = "github:p3nguin-kun/penguinFox";
       flake = false;
     };
+
+    # Zig Latest
+    zig.url = "github:mitchellh/zig-overlay";
   };
 
   outputs =
