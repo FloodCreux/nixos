@@ -1,6 +1,10 @@
 {
 	"layer": "top",
-	"custom/left-arrow-dark": {
+  "mode": "dock",
+  "reload_style_on_change": true,
+  "gtk-layer-shell": true,
+
+  "custom/left-arrow-dark": {
 		"format": "",
 		"tooltip": false
 	},
@@ -17,19 +21,14 @@
 		"tooltip": false
 	},
 	"hyprland/workspaces": {
-		"disable-scroll": false,
-    "all-outputs": true,
-		"format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": " ",
-      "3": " ",
-      "4": "",
-      "5": "󰐻 ",
-      "6": " ",
-      "urgent": "",
-      "focused": "",
-      "default": ""
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
     }
 	},
 	"clock#1": {
