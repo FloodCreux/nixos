@@ -1,5 +1,6 @@
 {
 	"layer": "top",
+  "mode": "dock",
 
   "custom/left-arrow-dark": {
 		"format": "",
