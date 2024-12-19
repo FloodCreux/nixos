@@ -23,6 +23,21 @@ let
     reaper # digital audio workstation (daw)
   ];
 
+  devPkgs = with pkgs; [
+    # Rust
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
+
+    # Zig
+    zigpkgs.master
+  ];
+
   packages =
     with pkgs;
     [
@@ -39,7 +54,8 @@ let
       xwaylandvideobridge # screensharing bridge
     ]
     ++ fontPkgs
-    ++ audioPkgs;
+    ++ audioPkgs
+    ++ devPkgs;
 
   wpctl = "${pkgs.wireplumber}/bin/wpctl";
 
