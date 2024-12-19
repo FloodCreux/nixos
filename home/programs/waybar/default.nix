@@ -59,9 +59,6 @@
         ];
         modules-right = [
           "custom/left-arrow-dark"
-          "hyprland/language"
-          "custom/left-arrow-light"
-          "custom/left-arrow-dark"
           "network"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
