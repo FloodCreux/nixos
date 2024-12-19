@@ -105,7 +105,7 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 20,
+		"icon-size": 15,
     "show-passive-items": true
 	},
   "custom/spotify": {
