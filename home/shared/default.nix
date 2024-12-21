@@ -15,6 +15,7 @@ let
     eza # a better `ls`
     fd # "find" for files
     gimp # gnu image manipulation program
+    youtube-music # music player
     hyperfine # command-line benchmarking tool
     killall # kill processes by name
     lnav # log file navigator on the terminal

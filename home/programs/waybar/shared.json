@@ -111,13 +111,13 @@
 	},
   "custom/spotify": {
     "format": "{icon}",
-    "format-icons": [ "󰓇 " ]
+    "format-icons": [ " " ]
   },
   "custom/mpris": {
     "format": "{}",
     "return-type": "json",
     "max-length":70,
-    "exec": "playerctl --player=spotify metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{status}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "exec": "playerctl --player=youtube-music metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{status}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "on-click": "playerctl play-pause"
   },
   "group/group-power": {
