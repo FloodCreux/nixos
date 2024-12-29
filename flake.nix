@@ -34,6 +34,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Ghostty
+    ghostty.url = "github:ghostty-org/ghostty";
+
     # Fish shell
     fish-bobthefish-theme = {
       url = "github:gvolpe/theme-bobthefish";

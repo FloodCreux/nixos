@@ -110,6 +110,10 @@ let
   zigOverlay = f: p: {
     zigpkgs = zig.packages.${p.system};
   };
+
+  ghosttyOverlay = f: p: {
+    ghostty = inputs.ghostty.packages.${system}.default;
+  };
 in
 [
   cowsayOverlay
@@ -119,6 +123,7 @@ in
   nurpkgs.overlays.default
   rustOverlay
   zigOverlay
+  ghosttyOverlay
   neovim-flake.overlays.${system}.default
   statix.overlays.default
   xargsOverlay
