@@ -76,6 +76,7 @@ in
   imports = [
     ../../shared
     ../../programs/foot
+    ../../programs/ghostty
     ../../programs/hyprlock
     ../../programs/hyprpaper
     ../../programs/pyprland
