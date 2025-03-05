@@ -37,9 +37,9 @@ let
 
   buildersOverlay = f: p: {
     mkHomeConfigurations =
-      {
-        pkgs ? f,
-        extraPkgs ? [ ],
+      { pkgs ? f
+      , extraPkgs ? [ ]
+      ,
       }:
       import ../outputs/hm.nix {
         inherit
@@ -51,9 +51,9 @@ let
       };
 
     mkNixosConfigurations =
-      {
-        pkgs ? f,
-        extraSystemConfig ? { },
+      { pkgs ? f
+      , extraSystemConfig ? { }
+      ,
       }:
       import ../outputs/os.nix {
         inherit
@@ -107,9 +107,9 @@ let
 
   rustOverlay = inputs.fenix.overlays.default;
 
-  zigOverlay = f: p: {
-    zigpkgs = zig.packages.${p.system};
-  };
+  # zigOverlay = f: p: {
+  #   zigpkgs = zig.packages.${p.system};
+  # };
 
   ghosttyOverlay = f: p: {
     ghostty = inputs.ghostty.packages.${system}.default;
@@ -122,7 +122,7 @@ in
   nixSearchOverlay
   nurpkgs.overlays.default
   rustOverlay
-  zigOverlay
+  # zigOverlay
   ghosttyOverlay
   neovim-flake.overlays.${system}.default
   statix.overlays.default

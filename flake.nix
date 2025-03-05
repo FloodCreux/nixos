@@ -85,7 +85,7 @@
     };
 
     # Zig Latest
-    zig.url = "github:mitchellh/zig-overlay";
+    # zig.url = "github:mitchellh/zig-overlay";
   };
 
   outputs =

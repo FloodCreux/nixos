@@ -47,11 +47,24 @@ in
     firejail
     nix-schema
     vim
+    tmux
+    docker
+    docker-compose
     wget
+    iptables
+    inetutils
+    nmap
     git
+    bash
     kitty
     yazi
     gh
+    udisks2
+    gnumake
+    bun
+    go
+    xclip
+    wl-clipboard
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -65,10 +78,10 @@ in
   # List services that you want to enable:
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
+  networking.firewall.allowedTCPPorts = [ 80 443 22 6969 ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
 
   # Enable Docker support
   virtualisation = {
@@ -95,6 +108,12 @@ in
       nssmdns4 = true;
     };
 
+    logind = {
+      lidSwitchExternalPower = "ignore";
+      extraConfig = "HandlePowerKey=suspend";
+      lidSwitch = "ignore";
+    };
+
     # Enable the OpenSSH daemon.
     openssh = {
       enable = true;
@@ -109,6 +128,8 @@ in
       enable = true;
       drivers = [ pkgs.epson-escpr ];
     };
+
+    udev.packages = [ pkgs.udiskie pkgs.udisks2 ];
   };
 
   # Making fonts accessible to applications.
